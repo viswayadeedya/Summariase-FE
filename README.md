@@ -80,16 +80,15 @@ This demonstration version has some limitations:
 1. Clone the repository
 2. Install dependencies with `npm install`
 3. Create a `.env.local` file with your API keys:
-   ```
-   OPENAI_API_KEY=your-openai-api-key
-   NOTION_API_KEY=your-notion-api-key
-   NOTION_DATABASE_ID=your-notion-database-id
-   LEMON_SQUEEZY_API_KEY=your-lemon-squeezy-api-key
-   LEMON_SQUEEZY_WEBHOOK_SECRET=your-webhook-secret
-   LEMON_SQUEEZY_STORE_ID=your-store-id
-   LEMON_SQUEEZY_ONE_TIME_PRODUCT_ID=your-one-time-product-id
-   LEMON_SQUEEZY_MONTHLY_PRODUCT_ID=your-monthly-product-id
-   LEMON_SQUEEZY_YEARLY_PRODUCT_ID=your-yearly-product-id
-   ```
+
+```
+# Summary Limits
+FREE_SUMMARIES_PER_DAY=3
+ONE_TIME_SUMMARIES_PER_MONTH=30
+MONTHLY_SUMMARIES_PER_MONTH=100
+YEARLY_SUMMARIES_PER_MONTH=300
+
+```
+
 4. Run the development server with `npm run dev`
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
