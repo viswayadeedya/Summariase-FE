@@ -35,7 +35,6 @@ export default function PricingPage() {
   const handleSelectPlan = (plan: (typeof PRICING_PLANS)[0]) => {
     console.log(plan);
     if (plan.id === "free") {
-      // Already on free plan
       return;
     }
 
@@ -44,12 +43,11 @@ export default function PricingPage() {
       return;
     }
 
-    // For demo, we'll just open a new window to an example checkout page
-    // In a real app, this would redirect to Lemon Squeezy checkout with the correct product ID
-    const checkoutUrl = `https://summariase.lemonsqueezy.com/buy/${
-      plan.productId
-    }?checkout[custom][userId]=${localStorage.getItem("summaraize_uid") || ""}`;
-    window.open(checkoutUrl, "_blank");
+    const userId = "summarise_uid";
+    if (!userId) toast.message("Heads up: user_id is empty");
+
+    // Currently not implementing payment because not going public yet.
+    // Future implementation of payment redirects would go here.
   };
 
   // Handle token activation success
